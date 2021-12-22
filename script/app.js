@@ -91,7 +91,7 @@ xmlhttp.onreadystatechange = function(){
           data: {
               labels: hours,
               datasets: [{
-                  label: 'Temp1',
+                  label: 'Temp',
                   data: temps,
                   backgroundColor: [
                       'rgba(0, 0, 0, 1)'
