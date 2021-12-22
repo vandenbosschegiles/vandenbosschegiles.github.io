@@ -3,7 +3,7 @@ let visible = 1;
 
 const chartCelcius = function() {
 const xmlhttp = new XMLHttpRequest();
-const url = "https://vandenbosschegiles.github.io/../script/weather_celcius_today.json";
+const url = "../../script/weather_celcius_today.json";
 xmlhttp.open("GET",url, true)
 xmlhttp.send();
 xmlhttp.onreadystatechange = function(){
@@ -66,7 +66,7 @@ xmlhttp.onreadystatechange = function(){
 
  const chartFahrenheit = function() {
   const xmlhttp = new XMLHttpRequest();
-  const url = "https://vandenbosschegiles.github.io/../script/weather_fahrenheit_today.json";
+  const url = "../../script/weather_fahrenheit_today.json";
   xmlhttp.open("GET",url, true)
   xmlhttp.send();
   xmlhttp.onreadystatechange = function(){
@@ -406,7 +406,7 @@ const filterUnit =  function(){
   arrSwitch.addEventListener('change', function () {
   if (arrSwitch.checked) {
       handleData(
-        `https://vandenbosschegiles.github.io/../script/weather_fahrenheit_today.json`,
+        `../../script/weather_fahrenheit_today.json`,
         showWeatherTodayFahr);
     console.log('Checked');
     visible = 2
@@ -415,7 +415,7 @@ const filterUnit =  function(){
   } else {
     // do that
     handleData(
-      `https://vandenbosschegiles.github.io/../script/weather_celcius_today.json`,
+      `../../script/weather_celcius_today.json`,
       showWeatherTodayCelc);
     console.log('Not checked');
     visible = 1
@@ -431,13 +431,13 @@ const get = (url) => fetch(url).then((r) => r.json());
 // Hier wordt de API opgehaald
 const getAPI = async () => {
 	
-	const urlToday = `https://vandenbosschegiles.github.io/../script/weather_celcius_today.json`;
+	const urlToday = `../../script/weather_celcius_today.json`;
 	const weatherTodayData = await get(urlToday);
 	// console.log(weatherTodayData)
-  const urlWeekCelcius = `https://vandenbosschegiles.github.io/../script/weather_celcius_week.json`;
+  const urlWeekCelcius = `../../script/weather_celcius_week.json`;
   const weatherWeekDataCelcius = await get(urlWeekCelcius);
   // console.log(weatherWeekDataCelcius)
-	const urlWeekFahrenheit = `https://vandenbosschegiles.github.io/../script/weather_fahrenheit_week.json`;
+	const urlWeekFahrenheit = `../../script/weather_fahrenheit_week.json`;
   const weatherWeekDataFahrenheit = await get(urlWeekFahrenheit);
 	// Eerst bouwen we onze url op
 	// Met de fetch API proberen we de data op te halen.
