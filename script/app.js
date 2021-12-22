@@ -406,7 +406,7 @@ const filterUnit =  function(){
   arrSwitch.addEventListener('change', function () {
   if (arrSwitch.checked) {
       handleData(
-        `/../script/weather_fahrenheit_today.json`,
+        `https://vandenbosschegiles.github.io/../script/weather_fahrenheit_today.json`,
         showWeatherTodayFahr);
     console.log('Checked');
     visible = 2
@@ -415,7 +415,7 @@ const filterUnit =  function(){
   } else {
     // do that
     handleData(
-      `/../script/weather_celcius_today.json`,
+      `https://vandenbosschegiles.github.io/../script/weather_celcius_today.json`,
       showWeatherTodayCelc);
     console.log('Not checked');
     visible = 1
@@ -431,13 +431,13 @@ const get = (url) => fetch(url).then((r) => r.json());
 // Hier wordt de API opgehaald
 const getAPI = async () => {
 	
-	const urlToday = `http://127.0.0.1:5502/../script/weather_celcius_today.json`;
+	const urlToday = `https://vandenbosschegiles.github.io/../script/weather_celcius_today.json`;
 	const weatherTodayData = await get(urlToday);
 	// console.log(weatherTodayData)
-  const urlWeekCelcius = `http://127.0.0.1:5502/../script/weather_celcius_week.json`;
+  const urlWeekCelcius = `https://vandenbosschegiles.github.io/../script/weather_celcius_week.json`;
   const weatherWeekDataCelcius = await get(urlWeekCelcius);
   // console.log(weatherWeekDataCelcius)
-	const urlWeekFahrenheit = `http://127.0.0.1:5502/../script/weather_fahrenheit_week.json`;
+	const urlWeekFahrenheit = `https://vandenbosschegiles.github.io/../script/weather_fahrenheit_week.json`;
   const weatherWeekDataFahrenheit = await get(urlWeekFahrenheit);
 	// Eerst bouwen we onze url op
 	// Met de fetch API proberen we de data op te halen.
