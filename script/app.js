@@ -406,7 +406,7 @@ const filterUnit =  function(){
   arrSwitch.addEventListener('change', function () {
   if (arrSwitch.checked) {
       handleData(
-        `https://vandenbosschegiles.github.io/../script/weather_fahrenheit_today.json`,
+        `/../script/weather_fahrenheit_today.json`,
         showWeatherTodayFahr);
     console.log('Checked');
     visible = 2
@@ -415,7 +415,7 @@ const filterUnit =  function(){
   } else {
     // do that
     handleData(
-      `https://vandenbosschegiles.github.io/../script/weather_celcius_today.json`,
+      `/../script/weather_celcius_today.json`,
       showWeatherTodayCelc);
     console.log('Not checked');
     visible = 1
