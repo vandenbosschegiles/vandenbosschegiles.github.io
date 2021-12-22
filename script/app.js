@@ -3,7 +3,7 @@ let visible = 1;
 
 const chartCelcius = function() {
 const xmlhttp = new XMLHttpRequest();
-const url = "http://127.0.0.1:5502/../script/weather_celcius_today.json";
+const url = "https://vandenbosschegiles.github.io/../script/weather_celcius_today.json";
 xmlhttp.open("GET",url, true)
 xmlhttp.send();
 xmlhttp.onreadystatechange = function(){
@@ -66,7 +66,7 @@ xmlhttp.onreadystatechange = function(){
 
  const chartFahrenheit = function() {
   const xmlhttp = new XMLHttpRequest();
-  const url = "http://127.0.0.1:5502/../script/weather_fahrenheit_today.json";
+  const url = "https://vandenbosschegiles.github.io/../script/weather_fahrenheit_today.json";
   xmlhttp.open("GET",url, true)
   xmlhttp.send();
   xmlhttp.onreadystatechange = function(){
