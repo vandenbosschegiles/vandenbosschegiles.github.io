@@ -14,12 +14,14 @@
   --global-color-maxTemp: #d64045;
   --global-backgroundColor-light: #f2fbff;
   --global-backgroundColor-dark: #11103a;
+  --table-backgroundColor-light: #fff6f2;
   --global-fontWeight-regular: 400;
   --global-fontWeight-medium: 500;
 
   /* global page settings */
   --global-html-color: var(--global-color-front);
   --global-html-fontSize: 2rem;
+  --global-html-smallfontSize: 1.6rem;
   --global-html-padding: 2rem;
   --global-html-gap: 2rem;
   --global-html-backgroundColor: var(--global-color-back);
@@ -170,15 +172,9 @@ table {
   width: 100%;
   height: auto;
   border: 0;
-  /* background-color: #ffede1; */
   background-color: #fff6f2;
-  /* border: 1px solid green; */
 }
 
-/* th,
-td {
-  border: 1px solid green;
-} */
 .c-title__today {
   font-size: 3rem;
   font-weight: 400;
@@ -195,7 +191,6 @@ td {
   gap: 1rem;
   opacity: 1;
   justify-content: center;
-  /* font-size: 1.6rem; */
   font-size: var(--global-html-fontSize);
 }
 
@@ -239,10 +234,10 @@ li {
 
 .c-sunrise,
 .c-sunset {
-  font-size: 1.6rem;
+  font-size: var(--global-html-smallfontSize);
 }
 .c-forecast__city {
-  font-size: 1.6rem;
+  font-size: var(--global-html-smallfontSize);
 }
 .c-forecast__today {
   display: flex;
@@ -265,7 +260,6 @@ li {
 }
 .c-max-temp,
 .c-min-temp {
-  /* font-size: 1.6rem; */
   font-size: var(--global-html-fontSize);
   font-weight: var(--global-fontWeight-medium);
 }
@@ -314,6 +308,7 @@ table {
   border-spacing: 0;
   width: 100%;
   border: 1px solid #ddd;
+  background-color: var(--table-backgroundColor-light);
 }
 
 tr,
