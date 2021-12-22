@@ -17,6 +17,7 @@
   --table-backgroundColor-light: #fff6f2;
   --global-fontWeight-regular: 400;
   --global-fontWeight-medium: 500;
+  --global-fontWeight-bold: 700;
 
   /* global page settings */
   --global-html-color: var(--global-color-front);
@@ -29,6 +30,8 @@
 
   /* Border settings */
   --global-border-radius: 2rem;
+  --global-border-width: 1px;
+  --global-border-color: #ddd;
   /* baseline */
   --global-baseline: calc(1rem / 2);
 
@@ -134,6 +137,7 @@ body {
   }
   .c-table {
     overflow-x: scroll;
+    border: var(--global-border-width) solid var(--global-border-color);
   }
 }
 
@@ -160,7 +164,7 @@ body {
 }
 
 .c-weather__dashboard-subtitle {
-  font-weight: var(--global-fontWeight-medium);
+  font-weight: var(--global-fontWeight-bold);
   font-size: 2.4rem;
   padding: 0;
   margin: 1rem 0;
@@ -172,7 +176,7 @@ table {
   width: 100%;
   height: auto;
   border: 0;
-  background-color: #fff6f2;
+  background-color: var(--table-backgroundColor-light);
 }
 
 .c-title__today {
@@ -307,7 +311,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  border: 1px solid #ddd;
   background-color: var(--table-backgroundColor-light);
 }
 
@@ -347,6 +350,7 @@ td {
     overflow: visible;
     max-width: fit-content;
     table-layout: fixed;
+    border: var(--global-border-width) solid var(--global-border-color);
   }
   td,
   tr {
@@ -434,7 +438,7 @@ td {
   margin-right: 1rem;
   background-color: var(--toggle-backgroundColor);
   border-radius: 32px;
-  border: 1px solid var(--toggle-backgroundColor);
+  border: var(--global-border-width) solid var(--toggle-backgroundColor);
   transition: all var(--global-transitionDuration-alpha)
     var(--global-transitionEasing-out);
   /* box-shadow: var(--toggle-boxShadow, 0); */
@@ -484,6 +488,7 @@ td {
     overflow: visible;
     max-width: fit-content;
     table-layout: fixed;
+    border: var(--global-border-width) solid var(--global-border-color);
   }
   td,
   tr {
